@@ -11,7 +11,6 @@ with mss.mss() as sct:
     # Get information of monitor 2
     monitor_number = 1
     mon = sct.monitors[monitor_number]
-    start_time = time.time()
 
     # (1120, 710)
     x = 55
@@ -30,6 +29,7 @@ with mss.mss() as sct:
     #time.sleep(5)
     
     while True:
+        start_time = time.time()
         sct_img = sct.grab(monitor)
         pixel_color = sct_img.pixel(x, y)  # Get the color value at (1120, 710)
 
